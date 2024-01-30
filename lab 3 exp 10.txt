@@ -1,0 +1,13 @@
+//program to swap values of two variables without using a third variable 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int a,b;
+  printf("Enter the values of a and b \n");
+  scanf("%d %d",&a,&b);
+  a=a+b;
+  b=a-b;
+  a=a-b;
+  printf("The swapped value of a:%d and b:%d",a,b);
+}

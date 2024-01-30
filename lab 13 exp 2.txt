@@ -1,0 +1,45 @@
+//program to create structures 
+#include<stdio.h>
+void main()
+{
+    int i,j,n;
+    printf("Enter the number of students \n");
+    scanf("%d",&n);
+    struct student
+    {
+       char name[100];
+       int roll;
+       float marks[3];
+       float total;
+    }s[n],temp;
+    for(i=0;i<n;i++)
+    {
+        s[i].total=0;
+        printf("Enter the name and roll no of student %d \n",i+1);
+        scanf("%s %d",s[i].name,&s[i].roll);
+        for(j=0;j<3;j++)
+        {
+           printf("Enter the mark in subject %d of student %d \n",j+1,i+1);
+           scanf("%f",&s[i].marks[j]);
+           s[i].total+=s[i].marks[j];
+        }
+        printf("\n");
+    }
+    for(i=0;i<n;i++) 
+    {
+        for(j=i+1;j<n;j++) 
+        {
+            if (s[i].total < s[j].total) 
+            {
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+    printf("Name   roll no.  total marks :\n\n");
+    for(i=0;i<n;i++)
+    {
+        printf("%s       %d      %f \n",s[i].name,s[i].roll,s[i].total);
+    }
+}

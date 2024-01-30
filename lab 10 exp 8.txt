@@ -1,0 +1,20 @@
+//program to find substring of a given string 
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str[100];
+    int a,b,i=0,c=0;
+    printf("Enter a string \n");
+    gets(str);
+    printf("Enter two indexes for substring \n");
+    scanf("%d %d",&a,&b);
+    char str1[100];
+    for(i=a-1;i<b;i++)
+    {
+        str1[c]=str[i];
+        c++;
+    }
+    printf("The substring is :");
+    puts(str1);
+}

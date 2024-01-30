@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int n1,n2,i,j,c=0;
+  printf("Enter first limit ");
+  scanf("%d",&n1);
+  printf("Enter second limit ");
+  scanf("%d",&n2);
+  for(i=n1;i<=n2;i++)
+  {
+    for(j=1;j<=i;j++)
+    {
+      if(i%j==0)
+      {
+         c++;
+      }
+    }
+    if(c==2)
+    {
+      printf("%d ",i);
+    }
+    c=0;
+  }
+}

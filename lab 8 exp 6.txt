@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main()
+{
+  int num,i,p=0,n=0,o=0,e=0,z=0;
+  printf("Enter the number of elements ");
+  scanf("%d",&num);
+  int ar[num];
+  printf("Enter the elements of array \n");
+  for(i=0;i<num;i++)
+  {
+     scanf("%d",&ar[i]);
+  }
+  for(i=0;i<num;i++)
+  {
+    if(ar[i]>0)
+      p++;
+    if(ar[i]<0)
+      n++;
+    if(ar[i]%2==0)
+      e++;
+    if(ar[i]%2!=0)
+      o++;
+    if(ar[i]==0)
+      z++; 
+  }
+  printf("Number of positive numbers : %d \n",p);
+  printf("Number of negative numbers : %d \n",n);
+  printf("Number of odd numbers : %d \n",o);
+  printf("Number of even numbers : %d \n",e);
+  printf("Number of zeros : %d \n",z);
+}

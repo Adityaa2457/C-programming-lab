@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+  int n,i,c=0;
+  printf("Enter the number of elements of array ");
+  scanf("%d",&n);
+  int ar[n],arr[n];
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&ar[i]);
+  }
+  printf("Reverse of array is :\n");
+  for(i=n-1;i>=0;i--)
+  {
+    arr[c]=ar[i];
+    c++;
+  }
+  for(i=0;i<n;i++)
+  {
+    printf("%d ",arr[i]);
+  }
+}

@@ -1,0 +1,18 @@
+//program to find gcd of two numbers  with recusrsion
+#include<stdio.h>
+int gcd(int n1,int n2)
+{
+    if(n1==0)
+       return n2;
+    if(n2==0)
+       return n1;
+    return gcd(n2,n1%n2);
+}
+void main()
+{
+    int a,b;
+    printf("Enter two numbers \n");
+    scanf("%d %d",&a,&b);
+    printf("GCD of %d and %d is %d",a,b,gcd(a,b));
+}
+

@@ -1,0 +1,31 @@
+//program to print first n prime numbers 
+#include<stdio.h>
+int isPrime(int num)
+{
+    int c=0;
+    for(int i=2;i<=num/2;i++)
+    {
+        if(num%i==0)
+          c++;
+    }
+    if(c==0)
+      return 1;
+    else 
+      return 0;
+}
+void main()
+{
+    int n,k=0,i=2;
+    printf("Enter the number of terms \n");
+    scanf("%d",&n);
+    printf("First %d prime numbers are : ",n);
+    while(k!=n)
+    {
+        if(isPrime(i))
+        {
+          printf("%d ",i);
+          k++;
+        }
+        i++;
+    }
+}

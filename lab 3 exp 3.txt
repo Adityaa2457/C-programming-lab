@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+//program to convert time in seconds to hour ,minute and seconds
+void main()
+{
+ int s,h,m,sec;
+ printf("Enter time in seconds \n");
+ scanf("%d",&sec);
+ h=sec/3600;
+ m=(sec-(3600*h))/60;
+ s=(sec-(3600*h)-(m*60));
+ printf("Time is-> %d:%d:%d",h,m,s);
+}
+ 

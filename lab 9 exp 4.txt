@@ -1,0 +1,58 @@
+//program to check given matrix is magic square or not 
+#include<stdio.h>
+void main()
+{
+  int m,n,i,j,k;
+  printf("Enter the dimensions of matrix \n");
+  scanf("%d %d",&m,&n);
+  int ar[m][n];
+  if(m==n)
+  {
+    int sr[n],sc[n],sd1=0,sd2=0,sd=0,flag=0;
+    printf("Enter the elements of matrix \n");
+    for(i=0;i<m;i++)
+      for(j=0;j<n;j++)
+         scanf("%d",&ar[i][j]);
+    for(i=0;i<m;i++)
+    {
+      sd1+=ar[i][i];
+      sd2+=ar[i][n-i-1];
+    }
+    if(sd1==sd2)
+    {
+      sd=sd1;
+      for(i=0;i<m;i++)
+      {
+        sr[i]=0;
+        sc[i]=0;
+        for(j=0;j<n;j++)
+        {
+           sr[i]+=ar[i][j];
+           sc[i]+=ar[j][i];
+        }
+      }
+      int rowsum=sr[0];
+      int colsum=sc[0];
+      for(i=1;i<m;i++)
+      {
+        if((sc[i]== colsum) && (sr[i]==rowsum) && (colsum==sd) && (rowsum==sd))
+         flag=1;
+      }
+      if(flag==1)
+        printf("The matrix is  magic sqaure \n");
+      else
+        printf("Not a magic square \n");
+    }
+    else
+    {
+       printf("Sum of disgonals is not equal \n Therefore not a magic square \n ");
+    }
+  }
+  else
+  {
+    printf("The dimensions of matrix is not same \n Therefore cant be a magic square ");
+  }
+}     
+    
+  
+   

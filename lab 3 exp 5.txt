@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+//program to convert temp in celsius to fahrenheit and vice versa 
+void main()
+{
+  float c,f;
+  printf("enter temp in fahrenheit to convert it to celsius \n");
+  scanf("%f",&f);
+  printf("Enter temp in celsius to convert it to fahrenheit\n");
+  scanf("%f",&c);
+  f=((f-32)/9)*5;
+  c=(9*c/5)+32;
+  printf("Temperature in celsius from fahrenheit is %f \n",f);
+  printf("Tpmperature in fahrenheit from celsius is %f \n",c);
+}

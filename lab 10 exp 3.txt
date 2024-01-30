@@ -1,0 +1,28 @@
+//program to find last occurance of a particular character 
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str[100],ch;
+    int i,len,pos=-1;
+    printf("Enter a string \n");
+    gets(str);
+    len=strlen(str);
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+    for(i=0;i<len;i++)
+    {
+        if(str[i]==ch)
+        {
+            pos=i;
+        }
+    }
+    if(pos>=0)
+    {
+        printf("The character's last occurance in the string was at %dth position",pos);  
+    }
+    else
+    {
+        printf("The character is not present in the string");
+    }
+}

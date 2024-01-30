@@ -1,0 +1,24 @@
+//program to calculate area of traianlge using heron's formula 
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+  int a,b,c;
+  float ar,s=0;
+  printf("Enter the sides of Triangle \n");
+  scanf("%d %d %d",&a,&b,&c);
+  s=(a+b+c)/2;
+  if( ((a+b)>c) || ((b+c)>a) || ((c+a)>b) )
+  {
+    ar=sqrt(s*(s-a)*(s-b)*(s-c));
+    printf("Area of triangle is %f ",ar); 
+  }
+  else 
+  {
+    printf("Not a valid traingle for herons formula ");
+  }
+}
+  
+    
+    

@@ -1,0 +1,12 @@
+//program to evaluate the area of cricle 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  double ar,r;
+  const double pi=3.14;
+  printf("Enter the radius of circle ");
+  scanf("%lf",&r);
+  ar=pi*r*r;
+  printf("Area of circle is %lf",ar);
+}

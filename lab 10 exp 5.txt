@@ -1,0 +1,16 @@
+//program to count number of words in a sentence 
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str[200];
+    int c=1,i;
+    printf("Enter a sentence \n");
+    gets(str);
+    for (i = 0; str[i] != '\0';i++)
+    {
+        if(str[i]==' ' && str[i+1]!=' ')
+            c++;
+    }
+    printf("The number of words in sentence is %d \n",c);
+}

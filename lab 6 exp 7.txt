@@ -1,0 +1,30 @@
+//program to find sum of n terms of sin series 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int n,sum=0,x,a,i,j;
+  printf("Enter the number of terms of series sin(x)=x - x^3 + x^5 -x^7 + ..... \n");
+  scanf("%d",&n);
+  printf("Enter the value of x \n");
+  scanf("%d",&x);
+  for(i=1;i<=n;i++)
+  {
+    for(j=1,a=1;j<=(2*i)-1;j++)
+    {
+      if(i%2==0)
+      {  
+         a=a*(-x);
+      }
+      if(i%2!=0)
+      {
+         a=a*x;
+      }
+    }
+    sum=sum+a;
+  }
+  printf("Sum of %d terms of sin series is %d ",n,sum);
+}
+  
+    
+    

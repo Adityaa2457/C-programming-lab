@@ -1,0 +1,12 @@
+//program to access two integers using pointers and add them  
+#include<stdio.h>
+void main()
+{
+    int a,b,*p1,*p2,sum=0;
+    printf("Enter two integers \n");
+    scanf("%d %d",&a,&b);
+    p1=&a;
+    p2=&b;
+    sum=*p1+*p2;
+    printf("Sum of two integers is %d",sum);
+}

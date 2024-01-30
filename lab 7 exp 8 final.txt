@@ -1,0 +1,26 @@
+#include <stdio.h>
+void main()
+{
+  int n,c=0,num=2,i,count,nth= 0;
+  printf("Enter nth Number\n");
+  scanf ("%d", &n);
+  while (c!=n)
+  {
+    count=0;
+    for (i=2;i<=num/2;i++)
+    {
+      if (num%i==0)
+      {
+       count++;
+       break;
+      }
+    }
+    if (count==0)
+    {
+      c++;
+      nth=num;
+    }
+    num++;
+  }
+  printf ("%dth prime number is %d ",n,nth);
+}

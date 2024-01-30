@@ -1,0 +1,64 @@
+//program to find total number of days for a given number of counting from january month 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int m,days;
+  printf("Enter a month");
+  scanf("%d",&m);
+  if(m==1)
+  {
+    days=31;
+  }
+  else if (m==2)
+  {
+    days=31+28;
+  }
+  else if (m==3)
+  {
+    days =31+28+31;
+  }
+  else if (m==4)
+  {
+    days =31+28+31+30;
+  }
+  else if (m==5)
+  {
+    days= 31+28+31+30+31;
+  }
+  else if(m==6)
+  {
+    days =31+28+31+30+31+30;
+  }
+  else if(m==7)
+  {
+    days=31+28+31+30+31+30+31;
+  }
+  else if(m==8)
+  {
+   days=31+28+31+30+31+30+31+31;
+  }
+  else if(m==9)
+  {
+    days=31+28+31+30+31+30+31+31+31;
+  }
+  else if(m==10)
+  {
+    days = 31+28+31+30+31+30+31+31+30+31;
+  }
+  else if(m==11)
+  {
+    days = 31+28+31+30+31+30+31+31+30+31+30;
+  }
+  else if(m==12)
+  {
+    days = 31+28+31+30+31+30+31+31+30+31+30+31;
+  }
+  else
+  {
+    printf("invalid Input");
+  }
+  printf("Number of days till month %d is %d",m,days);
+}
+
+      

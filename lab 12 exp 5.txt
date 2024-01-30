@@ -1,0 +1,33 @@
+//program to determine whether a substring is present in main string or not ,if yes return pointer of first occurance 
+//program to determine whether a substring is present in main string or not ,if yes return pointer of first occurance 
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    int i,c=0,len;
+    char str[100],str1[100];
+    printf("Enter the string \n");
+    gets(str);
+    printf("Enter a substring \n");
+    scanf("%s",str1);
+    char *p1=str;
+    char *p2=str1;
+    len=strlen(str1);
+    for(i=0,c=0;*p1!='\0' && *p2!='\0';p1++,i++)
+    {
+        if(*p1==*p2)
+        {
+           p2++;
+           c++;
+        }
+        else
+           c=0;
+    }
+    if(c==len)
+    {
+       printf("Substring is present at %d \n",i-c+1);
+       printf("pointer of first occurance is %x ",p2+1-c);
+    }
+    else
+       printf("substring not present ");
+}

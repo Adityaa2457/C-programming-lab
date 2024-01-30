@@ -1,0 +1,33 @@
+//program to create structures 
+#include<stdio.h>
+void main()
+{
+    int i,j,n;
+    float sum=0,avg=0;
+    struct date
+    {
+       int day;
+       int month;
+       int year;
+    }d;
+    printf("Enter current date\n");
+    scanf("%d %d %d",&d.day,&d.month,d.year);
+    printf("Enter the number of days to be added \n");
+    scanf("%d",&n);
+    temp=d.day+n;
+    m=d.month;
+    if(temp>31 && (m==1 || m==3 || m==5 || m==7 || m==8 || m==10 ||m==12))
+    {
+        d.day=temp-31;
+        d.month+=temp/31;
+        if(m==12)
+          d.year+=1;
+    }
+    if(temp>30 && (m==4 || m==6 || m==9 || m==11))
+    {
+        d.day=temp-30;
+        d.month+=1;
+    }
+    if()
+}
+    

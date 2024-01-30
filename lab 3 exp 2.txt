@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+//program to take input of two numbers and print their sum
+void main()
+{
+  int a,b,sum=0;
+  printf("Enter two numbers\n");
+  scanf("%d %d",&a,&b);
+  sum=a+b;
+  printf("Sum is %d",sum);
+}
+ 

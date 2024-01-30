@@ -1,0 +1,7 @@
+#include<stdio.h>
+#include<conio.h>
+//first program to print hello on screen 
+void main()
+{
+ printf("Hello");
+}

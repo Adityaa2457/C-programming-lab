@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+//prgram to convert distance in mm  to cm ,inch ,feet
+void main()
+{
+  float cm,in,ft,mm;
+  printf("Enter distance in mm \n");
+  scanf("%f",&mm);
+  cm=mm/10;
+  in=cm/2.5;
+  ft=in/12;
+  printf("Distance in centimetre:%f, inch:%f, feet:%f ",cm,in,ft);
+}
+  

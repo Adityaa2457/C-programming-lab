@@ -1,0 +1,33 @@
+//program to create structures 
+#include<stdio.h>
+void main()
+{
+    int i,j,n;
+    float sum=0,avg=0;
+    printf("Enter the number of employees \n");
+    scanf("%d",&n);
+    struct employee
+    {
+       char name[100];
+       int empno;
+       float salary;
+       float hra;
+       float netsal;
+    }e[n];
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the name, employee no. ,base salary and HRA of employee %d \n",i+1);
+        scanf("%s %d %f %f",e[i].name,&e[i].empno,&e[i].salary,&e[i].hra);
+        e[i].netsal=e[i].salary+e[i].hra;
+    }
+    for(i=0;i<n;i++)
+        sum+=e[i].netsal;
+    avg=sum/n; 
+    printf("The names of employee whose net salary is greater than average salary of all employees is :\n\n");
+    printf("Name    employee no.    base salary      HRA             Net Salary :\n\n");
+    for(i=0;i<n;i++)
+    {
+        if(e[i].netsal>avg)
+          printf("%s \t   %d \t      %f \t %f \t %f\n",e[i].name,e[i].empno,e[i].salary,e[i].hra,e[i].netsal);
+    }
+}

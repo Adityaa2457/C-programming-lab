@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+  int n,i,j,a,b,c=0;
+  printf("Enter the number of elements ");
+  scanf("%d",&n);
+  int ar[n];
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&ar[i]);
+  }
+  printf("Enter two indexes \n");
+  scanf("%d %d",&a,&b);
+  int arr[(b-a)+1];
+  for(i=a;i<=b;i++)
+  {
+    arr[c]=ar[i]; 
+    c++; 
+  }
+  printf("Sub array is \n");
+  for(j=0;j<=(b-a);j++)
+  {
+    printf("%d  ",arr[j]);
+  }
+}

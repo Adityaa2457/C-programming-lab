@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+//to input two numbers and check whether one number is multiple of other or not 
+void msin()
+{
+ int x,y;
+ printf("enter two numbers \n");
+ scanf("%d %d",&x,&y);
+ if(x%y==0)
+ { 
+  printf("%d is multiple xx of %d \n",y,x);
+ }
+ else if(y%x==0)
+ { 
+  printf("%d is multiple yy of %d \n",x,y);
+ }
+ else 
+ { 
+  printf("None of them is a multiple of other ");
+ }
+}

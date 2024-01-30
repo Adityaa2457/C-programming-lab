@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+//to input marks and return grade 
+void main()
+{
+ int marks;
+ printf("enter the score between 0 to 10 \n");
+ scanf("%d",marks);
+ if(marks>=9 && marks<=10)
+ { 
+  printf("grade A");
+ }
+ else if(marks>=7 && marks<=8)
+ { 
+  printf("grade B");
+ }
+ else if(marks>=5 && marks<=6)
+ { 
+  printf("grade C");
+ }
+ else if(marks>=3 && marks<=4)
+ { 
+  printf("grade D");
+ }
+ else if(marks<=3)
+ { 
+  printf("grade E");
+ }
+ else
+ { 
+  printf("invalid input");
+ }
+}

@@ -1,0 +1,21 @@
+//program to reverse a given number 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int n,rev=0,num,ld;
+  printf("Enter a number \n");
+  scanf("%d",&n);
+  num=n;
+  while(num!=0)
+  {
+    ld=num%10;
+    rev=rev*10+ld;
+    num=num/10;
+  }
+  printf("Reverse of number is %d ",rev);
+}
+    
+
+  
+   

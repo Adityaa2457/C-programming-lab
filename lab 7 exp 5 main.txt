@@ -1,0 +1,21 @@
+//program to generate multiplication table 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int n,k,p,i,j;
+  printf("Enter the number rows ");
+  scanf("%d",&n);
+  printf("Enter the number of terms ");
+  scanf("%d",&k);
+  printf("multiplication table upto %d rows and %d columns is \n",n,k);
+  for(i=1;i<=n;i++)
+  { 
+    for(j=1;j<=i*k;j++)
+    {
+       p=i*j;
+       printf("%d ",p);
+    }
+    printf("\n");
+  }
+}   

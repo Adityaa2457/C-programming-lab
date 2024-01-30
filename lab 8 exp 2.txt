@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+  int n,i;
+  printf("Enter the number of elements ");
+  scanf("%d",&n);
+  int ar[n];
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&ar[i]);
+  }
+  int l=ar[0],s=ar[0];
+  for(i=1;i<n;i++)
+  {
+    if(ar[i]>l)
+     l=ar[i];
+    if(ar[i]<s)
+     s=ar[i];
+  }
+  printf("The smallest element is %d \n",s);
+  printf("The largest element is %d ",l);
+}
+

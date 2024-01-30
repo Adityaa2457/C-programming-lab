@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main()
+{
+    struct date
+    {
+       int day;
+       int month;
+       int year;
+    }d;
+    d.day=20;
+    d.month=4;
+    d.year=2022;
+    d.day=45-30;
+    d.month+=1;
+    printf("The final date after adding 45 days is %d/%d/%d",d.day,d.month,d.year);
+}

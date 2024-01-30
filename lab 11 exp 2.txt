@@ -1,0 +1,26 @@
+//program to find maximum of a given set of numbers using functions 
+#include<stdio.h>
+int max(int arr[],int num)
+{
+    int g=arr[0];
+    for(int i=1;i<num;i++)
+    {
+        if(arr[i]>g)
+          g=arr[i];
+    }
+    return g;
+}
+void main()
+{
+    int n,i;
+    printf("Enter how many numbers :\n");
+    scanf("%d",&n);
+    int ar[n];
+    printf("Enter the set of numbers \n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&ar[i]);
+    }
+    printf("The greatest among the set of numbers is %d",max(ar,n));
+}
+

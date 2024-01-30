@@ -1,0 +1,44 @@
+//program to sort a list of names 
+#include<stdio.h>
+#include<string.h>
+int compare(char str1[], char str2[])
+{
+    return strcmp(str1,str2);
+}
+void sort(char st[][100],int num)
+{
+    int i,j;
+    char temp[100];
+    for(i=0;i<num;i++)
+    {
+       for(j=i+1;j<num;j++)
+       {
+           if(compare(st[i],st[j])>0)
+           {
+               strcpy(temp,st[i]);
+               strcpy(st[i],st[j]);
+               strcpy(st[j],temp);
+           }
+       }
+    }
+}
+void main()
+{
+    int n,i;
+    printf("Enter total number of names :");
+    scanf("%d",&n);
+    n=n+1;
+    char str[n][100];
+    printf("Enter the list of names \n");
+    for(i=0;i<n;i++)
+        gets(str[i]);
+    printf("\n\nThe names entered are :");
+    for(i=0;i<n;i++)
+        puts(str[i]);
+    printf("\n\nNames after sorting in alphabetical order are :\n");
+    sort(str,n);
+    for(i=0;i<n;i++)
+    {
+       puts(str[i]); 
+    }
+}

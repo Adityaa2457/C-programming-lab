@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+  int n,*p,i,sum=0;
+  printf("Enter the number of elements ");
+  scanf("%d",&n);
+  int ar[n];
+  p=ar;
+  printf("Enter the elements \n");
+  for(i=0;i<n;i++)
+  {
+     scanf("%d",&ar[i]);
+  }
+  for(i=0;i<n;i++)
+  {
+    sum+=*p;
+    p++;
+  }
+  printf("Sum of elements stored in an array is %d ",sum);
+}

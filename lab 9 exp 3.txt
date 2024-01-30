@@ -1,0 +1,78 @@
+//multiplication of matrix 
+#include<stdio.h>
+void main()
+{
+  int m,n,x,y,p=0,i,j,k;
+  printf("Enter the dimensions of matrix 1 \n");
+  scanf("%d %d",&m,&n);
+  printf("Enter the dimensions of matrix 2 \n");
+  scanf("%d %d",&x,&y);
+  if(n != x)
+  {
+    printf("Multiplication not possible ");
+  }
+  else 
+  {
+    int ar1[m][n],ar2[x][y],ar3[m][y];
+    printf("Enter the elements of matrix 1 \n");
+    for(i=0;i<m;i++)
+    {
+      for(j=0;j<n;j++)
+      {
+         scanf("%d",&ar1[i][j]);
+      }
+    }
+    printf("Enter the elements of matrix 2 \n");
+    for(i=0;i<x;i++)
+    {
+      for(j=0;j<y;j++)
+      {
+         scanf("%d",&ar2[i][j]);
+      }
+    }
+    for(i=0;i<m;i++)
+    {
+       for(j=0;j<y;j++)
+       {
+          p=0;
+          for(k=0;k<n;k++)
+          {
+            p+=ar1[i][k]*ar2[k][j];
+            ar3[i][j]=p;
+          }
+       }
+    }
+    printf("Matrix 1 \n");
+    for(i=0;i<m;i++)
+    {
+      for(j=0;j<n;j++)
+      {
+         printf("%d ",ar1[i][j]);
+      }
+      printf("\n");
+    }
+    printf("Matrix 2 \n");
+    for(i=0;i<x;i++)
+    {
+      for(j=0;j<y;j++)
+      {
+         printf("%d ",ar2[i][j]);
+      }
+      printf("\n");
+    }
+    printf("Matrix after multiplication is :\n ");
+    for(i=0;i<m;i++)
+    {
+      for(j=0;j<y;j++)
+      {
+         printf("%d ",ar3[i][j]);
+      }
+      printf("\n");
+    }
+  }
+}
+
+    
+       
+    
+  

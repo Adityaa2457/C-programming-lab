@@ -1,0 +1,25 @@
+//program to print vowels and consonants in a string 
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str[100],ch;
+    int i,len,v=0,c=0;
+    printf("Enter a string \n");
+    gets(str);
+    len=strlen(str);
+    for(i=0;i<len;i++)
+    {
+        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U')
+        {
+            v++;
+        }
+        else if(str[i]>=65 && str[i]<=90 || str[i]>=97 && str[i]<=122)
+        {
+            c++;
+        }
+    }
+    printf("number of vowels in string is %d \n",v);
+    printf("number of consonants in string is %d \n",c);
+}
+   

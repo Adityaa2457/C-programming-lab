@@ -1,0 +1,19 @@
+//program to reverse a string 
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str[200],temp;
+    int len,i;
+    printf("Enter a string \n");
+    gets(str);
+    len=strlen(str);
+    for (i = 0;i<len/2;i++)
+    {
+        temp=str[len-i-1];
+        str[len-i-1]=str[i];
+        str[i]=temp;
+    }
+    printf("Reverse of string is : ");
+    puts(str);
+}

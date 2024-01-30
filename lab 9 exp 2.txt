@@ -1,0 +1,38 @@
+#include<stdio.h>
+void main()
+{ 
+  int m,n,c=0,i,j,ele;
+  printf("Enter the dimensions of matrix \n");
+  scanf("%d %d",&m,&n);
+  int ar[m][n];
+  printf("Enter the elements of matrix \n");
+  for(i=0;i<m;i++)
+  {
+    for(j=0;j<n;j++)
+    {
+       scanf("%d",&ar[i][j]);
+    }
+  }
+  printf("Enter the element to be searched ");
+  scanf("%d",&ele);
+  for(i=0;i<m;i++)
+  {
+    for(j=0;j<n;j++)
+    {
+       if(ele==ar[i][j])
+       c++;
+    }
+  }
+  if(c>0)
+  {
+    printf("The element %d is present %d times ",ele,c);
+  }
+  else 
+  {
+    printf("element not present ");
+  }
+}
+  
+  
+  
+  

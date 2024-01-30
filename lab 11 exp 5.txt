@@ -1,0 +1,20 @@
+//program to generate the nth Fibonacci term using recursion. Print first N Fibonacci terms using this function. 
+#include<stdio.h>
+int fibo(int num)
+{
+    if (num <= 1) 
+       return num; 
+    else 
+       return (fibo(num-1) + fibo(num-2)); 
+}
+void main()
+{
+    int n,k=0,i=2;
+    printf("Enter the number of terms \n");
+    scanf("%d",&n);
+    printf("First %d fibonacci numbers are : ",n);
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",fibo(i));
+    }
+}

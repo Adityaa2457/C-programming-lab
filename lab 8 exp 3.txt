@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+  int n,i,sum=0;
+  printf("Enter the number of elements of array ");
+  scanf("%d",&n);
+  int ar[n];
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&ar[i]);
+  }
+  printf("Sum of elements of odd index is ");
+  for(i=1;i<n;i+=2)
+  {
+    sum=sum+ar[i];
+  }
+  printf("%d",sum);
+}
+  
+  

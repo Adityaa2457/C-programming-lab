@@ -1,0 +1,31 @@
+//program to find nth armstrong number 
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+  int n,i=0,j=0,k=0,r=0,s=0;
+  printf"Enter the value of n ");
+  scanf("%d",n);
+  while(k!=n)
+  {
+    s=0;
+    j=i;
+    do
+    {
+      r=j%10;
+      s=s+r*r*r;
+      j=j/10;
+    }while(j/10!=0)
+    if(s==i)
+    {
+       k++;
+    }
+    if(k!=n)
+    {
+       i++;
+    }
+  }
+  printf("%dth armstrong number is %d",n,i);
+}
+  
+  
